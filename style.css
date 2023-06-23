@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: #c292de;
+    border-radius: 25px;
+    margin: 10px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.card .content-card{
+    position: absolute;
+    top: 20px;
+    height: 0px;
+    width: 350px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    visibility: hidden;
+}
+
+.card:hover .content-card{
+    height: 330px;
+    transition: 0.5s;
+    visibility: visible;
+}
+
+.card .image{
+    position: absolute;
+    left: 25px;
+    width: 300px;
+    height: 300px;
+}
+
+.card .title{
+    position: relative;
+    color: #fff;
+    top: 10px;
+    text-align: center;
+    visibility: hidden;
+    font-weight: 700;
+}
+
+.card:hover .title{
+    visibility: visible;
+}
+
+.card .content-text{
+    position: relative;
+    color: #fff;
+    margin: 15px;
+    text-align: center;
+}
+
+.card:hover .content-text{
+    transition: 0.7s;
+    visibility: visible;
+}
+
+.card .btn-more-info{
+    position: absolute;
+    color: #c292de;
+    background: #fff;
+    left: 35%;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card:hover .btn-more-info{
+    visibility: visible;
+    opacity: 1;
+}
+
+.card:nth-child(2){
+    background: #95a3e0;
+}
+
+.card:nth-child(3){
+    background: #67b3e4;
+}
+
+
+
